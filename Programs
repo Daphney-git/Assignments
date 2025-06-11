@@ -1,0 +1,328 @@
+1.Take values of length and breadth and check if it is a rectangle or a square
+
+import java.util.Scanner;
+public class Square_or_Rectangle_check {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the length");
+		int length=sc.nextInt();
+		System.out.println("Enter the Breadth");
+		int Breadth=sc.nextInt();
+		if(length==Breadth)
+		{
+			int Squarearea=4*length;
+			System.out.println("Square area: "+Squarearea);
+			System.out.println("Its a square");
+		}
+		else
+		{
+			int Rectanglearea=length*Breadth;
+			System.out.println("Rectangle area: "+Rectanglearea);
+			System.out.println("Its a rectangle");
+		}
+		
+	}
+}
+
+2. Find largest between 4 numbers
+	public class Largest_of_4_numbers {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the 4 numbers: ");
+		Scanner sc= new Scanner (System.in);
+		int a = sc.nextInt();
+		int b=sc.nextInt();
+		int c= sc.nextInt();
+		int d=sc.nextInt();
+		int max=a;
+		if(b>max)
+		{
+			max=b;
+		}
+		if(c>max)
+		{
+			max=c;
+		}
+		if(d>max)
+		{
+			max=d;
+		}
+		System.out.println(max);
+	}
+}
+
+3. Check if a year is leap or not
+public class Leap_year_check {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the year: ");
+		Scanner sc= new Scanner(System.in);
+		int year = sc.nextInt();
+		
+		if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+		{
+			System.out.println("Its a leap year");
+		}
+		else
+		{
+			System.out.println("Its not a leap year");
+		}
+	}
+}
+
+4. Check the grading System
+public class GradeSystem_for_Maths {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+       System.out.print("Enter total marks (0–100): ");
+       int total = sc.nextInt();
+       System.out.print("Enter math marks (0–100): ");
+       int maths = sc.nextInt();
+       if (total < 20) {
+           System.out.println("Result: FAIL");
+       } else if (total >= 20 && total < 40 && maths < 20) {
+           System.out.println("Grade: D");
+       } else if (total >= 40 && total < 60 && maths > 30) {
+           System.out.println("Grade: C");
+       } else if (total >= 60 && total < 80 && maths > 60) {
+           System.out.println("Grade: B");
+       } else if (total >= 80 && total <= 100 && maths > 80) {
+           System.out.println("Grade: A");
+       } else {
+           System.out.println("No grade criteria matched.");
+       }
+	}
+}
+5. Calculate the factorial of a 9
+public class Factorial {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the factorial digit: ");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int fact=1;
+		for(int i=2;i<=num;i++)
+		{
+			fact=fact*i;
+		}
+		System.out.println(fact);
+	}
+}
+6. Count the number of digits in an integer
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+       System.out.print("Enter an integer: ");
+       int num = scanner.nextInt();
+       int count = 0;
+       if (num == 0) {
+           count = 1; // Special case: 0 has 1 digit
+       } else {
+           while (num > 0) {
+               num =num/ 10;
+               count++;
+           }
+	}System.out.println("Number of digits: " + count);
+	}
+
+
+
+7. Print the sum of even numbers between 1 and 50.
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the n:");
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+		int sum=0;
+		for(int i=1;i<=n;i++)
+		{
+			if(i%2==0)
+			{
+				
+				sum=sum+i;
+			}
+		}
+		System.out.println(sum);
+	}
+8. Print a menu-driven program for calculator operations (add, subtract, multiply, divide)
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the calculation choice: ");
+		Scanner sc = new Scanner(System.in);
+		int choice = sc.nextInt();
+		float sum=0;
+		if(choice>=1&&choice<=4)
+		{
+			System.out.println("1. Add the numbers");
+			System.out.println("2. Subtract the numbers");
+			System.out.println("3. Multiply the numbers");
+			System.out.println("4. Divide the numbers");
+			System.out.println("Enter the first number: ");
+			int num1=sc.nextInt();
+			System.out.println("Enter the second number: ");
+			int num2=sc.nextInt();
+			switch(choice)
+			{
+			case 1: sum=num1+num2;
+			System.out.println(sum);break;
+			case 2: sum=num1-num2;
+			System.out.println(sum);break;
+			case 3: sum=num1*num2;
+			System.out.println(sum);break;
+			case 4: sum=num1/num2;
+			System.out.println(sum);break;
+			}
+		}else
+		{
+		System.out.println("Incorrect option");
+		}
+	}
+9. Display the first 10 odd numbers.
+public static void main(String[] args) {
+		System.out.println("Enter the n: ");
+		Scanner sc = new Scanner(System.in);
+		int num=sc.nextInt();
+		for(int i=1;i<=num;i++)
+		{
+			if(i%2!=0)
+			{
+				System.out.println(i);
+			}
+		}
+		
+	}
+10. Print the multiplication table of a 29 using while loop.
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the multiplication number: ");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a=n;
+		int i=1;
+			while(i<=10)
+			{
+				int b=a*i;
+				System.out.println(b);
+				i++;
+			}
+		
+	}
+11. Check if a number is positive or negative.
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the number: ");
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+		if(n>0)
+		{
+			System.out.println("positive number");
+		}
+		else
+		if(n<0)
+		{
+			System.out.println("negative number");
+		}
+		else
+		{
+			System.out.println("0 number");
+		}
+	}
+12. WAP in Java to calculate Simple Intrest
+public static void main(String[] args) {
+		//si=(principal * rate * time) / 100
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Principal: ");
+		double p=sc.nextDouble();
+		System.out.println("Enter rate of interest: ");
+		double r=sc.nextDouble();
+		System.out.println("Enter time: ");
+		double t=sc.nextDouble();
+		if(p!=0)
+		{
+		double si = (p*r*t)/100;
+		System.out.println(si);
+		}
+	}
+
+13.Check whether a given number is Armstrong or not
+public static void main(String[] args) {
+		System.out.println("Enter the number");
+		Scanner sc= new Scanner(System.in);
+		int num = sc.nextInt();
+		int n,i,sum=0;
+		int original=num;
+		while(num!=0)
+		{
+			n=num%10;
+			i=n*n*n;
+			sum=sum+i;
+			num=num/10;
+			
+		}
+		if(original==sum)
+		{
+			System.out.println("armstrong");
+		}
+		else
+		{
+			System.out.println("not armstrong");
+		}
+	}
+14 Patterns
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int rows=5;
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+	}
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int rows=5;
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(i);
+			}
+			System.out.println("");
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int rows=5;
+		
+		for(int i=1;i<=5;i++)
+		{
+			int k=1;
+			for(int j=rows;j>=i;j--)
+			{  
+			System.out.print(k);
+			k++;
+			}
+			System.out.println("");
+		}
+	}
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int rows=5;
+		
+		for(int i=1;i<=5;i++)
+		{
+			for (char ch = 'A'; ch < 'A' + i; ch++) {
+               System.out.print(ch);
+           }
+			System.out.println("");
+		}
+	}
+
